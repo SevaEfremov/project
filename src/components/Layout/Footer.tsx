@@ -14,8 +14,7 @@ const Footer: React.FC = () => {
               <span className="ml-2 text-xl font-bold text-white">TechHardware</span>
             </div>
             <p className="text-sm mb-4">
-              Premium computer hardware for professionals, gamers, and enthusiasts.
-              Quality components at competitive prices.
+              Компьютерное оборудование премиум-класса для профессионалов, геймеров и энтузиастов. Качественные комплектующие по конкурентоспособным ценам.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -39,9 +38,6 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><Link to="/" className="hover:text-blue-400 transition-colors">Главная</Link></li>
               <li><Link to="/products" className="hover:text-blue-400 transition-colors">Продукция</Link></li>
-              <li><Link to="/categories" className="hover:text-blue-400 transition-colors">Категории</Link></li>
-              <li><Link to="/about" className="hover:text-blue-400 transition-colors">О нас</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-400 transition-colors">Контакты</Link></li>
             </ul>
           </div>
 

@@ -48,10 +48,8 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-800 hover:text-blue-700 transition">Home</Link>
-            <Link to="/products" className="text-gray-800 hover:text-blue-700 transition">Products</Link>
-            <Link to="/categories" className="text-gray-800 hover:text-blue-700 transition">Categories</Link>
-            <Link to="/about" className="text-gray-800 hover:text-blue-700 transition">About</Link>
+            <Link to="/" className="text-gray-800 hover:text-blue-700 transition">Главная</Link>
+            <Link to="/products" className="text-gray-800 hover:text-blue-700 transition">Товары</Link>
           </nav>
 
           {/* Search, Cart, Menu Toggle */}
@@ -95,10 +93,8 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
             <div className="flex flex-col space-y-3 px-4">
-              <Link to="/" className="text-gray-800 hover:text-blue-700 py-2 transition">Home</Link>
-              <Link to="/products" className="text-gray-800 hover:text-blue-700 py-2 transition">Products</Link>
-              <Link to="/categories" className="text-gray-800 hover:text-blue-700 py-2 transition">Categories</Link>
-              <Link to="/about" className="text-gray-800 hover:text-blue-700 py-2 transition">About</Link>
+              <Link to="/" className="text-gray-800 hover:text-blue-700 py-2 transition">Главная</Link>
+              <Link to="/products" className="text-gray-800 hover:text-blue-700 py-2 transition">Товары</Link>
               
               {/* Search Form - Mobile */}
               <form onSubmit={handleSearchSubmit} className="flex items-center bg-gray-100 rounded-full px-3 py-2 mt-2">
