@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ShoppingCart, ArrowLeft, ChevronRight, Star, Package, Check, AlertCircle } from 'lucide-react';
+import { ShoppingCart, ArrowLeft, ChevronRight, Star, Check, AlertCircle, Truck } from 'lucide-react';
 import { products } from '../data/products';
 import { Product } from '../types';
 import { useCart } from '../contexts/CartContext';
@@ -30,7 +30,6 @@ const ProductDetailPage: React.FC = () => {
     
     setProduct(foundProduct);
     
-    // Find related products in the same category
     const related = products
       .filter(p => p.category === foundProduct.category && p.id !== foundProduct.id)
       .slice(0, 4);
@@ -50,7 +49,7 @@ const ProductDetailPage: React.FC = () => {
     return (
       <div className="container mx-auto px-4 py-24 flex justify-center items-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Loading product...</h2>
+          <h2 className="text-2xl font-bold mb-4">Загрузка...</h2>
         </div>
       </div>
     );
@@ -58,11 +57,10 @@ const ProductDetailPage: React.FC = () => {
   
   return (
     <div className="container mx-auto px-4 py-24">
-      {/* Breadcrumbs */}
       <div className="flex items-center text-sm text-gray-500 mb-8">
-        <Link to="/" className="hover:text-blue-700">Home</Link>
+        <Link to="/" className="hover:text-blue-700">Главная</Link>
         <ChevronRight className="h-4 w-4 mx-2" />
-        <Link to="/products" className="hover:text-blue-700">Products</Link>
+        <Link to="/products" className="hover:text-blue-700">Товары</Link>
         <ChevronRight className="h-4 w-4 mx-2" />
         <Link to={`/products?category=${product.category}`} className="hover:text-blue-700">
           {product.category}
@@ -71,14 +69,12 @@ const ProductDetailPage: React.FC = () => {
         <span className="text-gray-700 font-medium">{product.name}</span>
       </div>
       
-      {/* Back Button */}
       <Link to="/products" className="inline-flex items-center text-blue-700 hover:text-blue-900 mb-6">
         <ArrowLeft className="h-4 w-4 mr-1" />
-        Back to Products
+        Назад к товарам
       </Link>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Product Image */}
         <div className="bg-white rounded-lg overflow-hidden shadow-md">
           <img 
             src={product.image} 
@@ -87,7 +83,6 @@ const ProductDetailPage: React.FC = () => {
           />
         </div>
         
-        {/* Product Info */}
         <div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
           
@@ -100,7 +95,7 @@ const ProductDetailPage: React.FC = () => {
                 />
               ))}
             </div>
-            <span className="text-gray-600">{product.rating} out of 5</span>
+            <span className="text-gray-600">{product.rating} из 5</span>
           </div>
           
           <div className="text-2xl font-bold text-blue-900 mb-6">
@@ -109,27 +104,25 @@ const ProductDetailPage: React.FC = () => {
           
           <p className="text-gray-700 mb-6">{product.description}</p>
           
-          {/* Stock Status */}
           <div className="flex items-center mb-6">
             {product.stock > 0 ? (
               <>
                 <Check className="h-5 w-5 text-green-500 mr-2" />
                 <span className="text-green-600 font-medium">
-                  In Stock ({product.stock} available)
+                  Осталось ({product.stock} товаров)
                 </span>
               </>
             ) : (
               <>
                 <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
-                <span className="text-red-600 font-medium">Out of Stock</span>
+                <span className="text-red-600 font-medium">Нет в наличии</span>
               </>
             )}
           </div>
           
-          {/* Add to Cart */}
           <div className="mb-8">
             <div className="flex items-center mb-4">
-              <label htmlFor="quantity" className="mr-4 text-gray-700">Quantity:</label>
+              <label htmlFor="quantity" className="mr-4 text-gray-700">Количество:</label>
               <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
                 <button 
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -170,26 +163,24 @@ const ProductDetailPage: React.FC = () => {
               }`}
             >
               <ShoppingCart className="h-5 w-5 mr-2" />
-              Add to Cart
+              Добавить в корзину
             </button>
           </div>
           
-          {/* Shipping Info */}
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <div className="flex items-start">
               <Truck className="h-5 w-5 text-blue-700 mt-1 mr-3 flex-shrink-0" />
               <div>
-                <h3 className="font-medium text-gray-900">Free Shipping</h3>
+                <h3 className="font-medium text-gray-900">Бесплатная доставка</h3>
                 <p className="text-sm text-gray-600">
-                  On orders over $100. Expected delivery: 2-4 business days.
+                  От $100. Быстрая доставка 2-4 рабочих дня.
                 </p>
               </div>
             </div>
           </div>
           
-          {/* Specifications */}
           <div>
-            <h2 className="text-xl font-bold mb-4">Specifications</h2>
+            <h2 className="text-xl font-bold mb-4">Характеристики</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
               {Object.entries(product.specs).map(([key, value]) => (
                 <div key={key} className="flex">
@@ -202,10 +193,9 @@ const ProductDetailPage: React.FC = () => {
         </div>
       </div>
       
-      {/* Related Products */}
       {relatedProducts.length > 0 && (
         <section className="mt-16">
-          <h2 className="text-2xl font-bold mb-6">Related Products</h2>
+          <h2 className="text-2xl font-bold mb-6">Связанные продукты</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedProducts.map(product => (
               <ProductCard key={product.id} product={product} />

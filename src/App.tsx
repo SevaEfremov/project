@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import Header from './components/Layout/Header';
@@ -7,6 +6,7 @@ import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
+import AuthForm from './pages/AuthForm';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
               <Route path="/product/:productId" element={<ProductDetailPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="*" element={<ProductsPage />} />
+              <Route path="/AuthForm" element={<AuthForm />} />
             </Routes>
           </main>
           <Footer />

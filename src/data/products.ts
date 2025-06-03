@@ -4,17 +4,17 @@ export const products: Product[] = [
   {
     id: 1,
     name: "AMD Ryzen 9 5900X",
-    category: "CPU",
+    category: "Процессоры",
     price: 399.99,
-    image: "https://images.pexels.com/photos/3520694/pexels-photo-3520694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "12-core, 24-thread processor with a base clock of 3.7GHz and boost up to 4.8GHz. Perfect for high-end gaming and content creation.",
+    image: "https://avatars.mds.yandex.net/i?id=a584d170af5316844fb157229ac1c0da6b73ade9-4790390-images-thumbs&n=13",
+    description: "Процессор AMD Ryzen 9 5900X OEM основан на архитектуре Zen 3 и предлагает высокую производительность и эффективность. Устройство имеет 12 ядер и 24 потока, что делает его оптимальным выбором для многозадачных процессов, игр и других требовательных приложений. Частота его работы способна достигать 4.8 ГГц. Кроме того, процессор поддерживает технологию Precision Boost 2. Она позволяет автоматически повышать тактовую частоту в зависимости от нагрузки. Также она имеет оперативную память DDR4.",
     specs: {
-      "Cores": "12",
-      "Threads": "24",
-      "Base Clock": "3.7 GHz",
-      "Boost Clock": "4.8 GHz",
-      "TDP": "105W",
-      "Socket": "AM4"
+      "Количество ядер": "12",
+      "Число потоков": "24",
+      "Базовая частота": "3.7 GHz",
+      "Максимальная частота": "4.8 GHz",
+      "тепловыделение (TDP)": "105W",
+      "Сокет": "AM4"
     },
     stock: 15,
     rating: 4.9,
@@ -23,16 +23,16 @@ export const products: Product[] = [
   {
     id: 2,
     name: "NVIDIA GeForce RTX 4080",
-    category: "GPU",
+    category: "Видеокарты",
     price: 1199.99,
-    image: "https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "High-performance graphics card with 16GB GDDR6X memory. Experience ray-tracing and AI-enhanced graphics for the ultimate gaming experience.",
+    image: "https://avatars.mds.yandex.net/get-marketpic/12420347/picb2e96af49492996535be25bd7cd490aa/351x468_multiply",
+    description: "Высокопроизводительная видеокарта с 16 ГБ оперативной памяти GDDR6X. Возможность трассировки лучей и графика с улучшенным искусственным интеллектом обеспечивают непревзойденный игровой опыт.",
     specs: {
-      "Memory": "16GB GDDR6X",
-      "CUDA Cores": "9728",
-      "Boost Clock": "2.51 GHz",
-      "Ray Tracing Cores": "76",
-      "Power Consumption": "320W"
+      "Обьем памяти": "16GB GDDR6X",
+      "Количество универсальных процессоров": "9728",
+      "Частота": "2610 МГц",
+      "Аппаратное ускорение трассировки лучей": "76",
+      "Потребляющая мощность": "320W"
     },
     stock: 8,
     rating: 4.8,
@@ -41,16 +41,16 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Corsair Vengeance RGB Pro 32GB",
-    category: "RAM",
+    category: "Оперативная память",
     price: 159.99,
-    image: "https://images.pexels.com/photos/5483073/pexels-photo-5483073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "High-performance DDR4 memory with RGB lighting, optimized for gaming and multitasking.",
+    image: "https://c.dns-shop.ru/thumb/st1/fit/500/500/9c16aad5ecf3edf059eeb6bd7e6c9326/2e6ab0451b2e208283946fa798af6f2b9fa6e7348024f90056ab1fbe0aae6185.jpg.webp",
+    description: "Высокопроизводительная память DDR4 с RGB-подсветкой, оптимизированная для игр и многозадачности.",
     specs: {
-      "Capacity": "32GB (2x16GB)",
-      "Speed": "3600MHz",
+      "Суммарный обьем памяти комплекта": "32GB (2x16GB)",
+      "Тактовая частота ": "3600MHz",
       "CAS Latency": "18",
-      "Voltage": "1.35V",
-      "RGB": "Yes"
+      "Напряжение питания": "1.35V",
+      "RGB": "Есть"
     },
     stock: 25,
     rating: 4.7
@@ -58,17 +58,17 @@ export const products: Product[] = [
   {
     id: 4,
     name: "ASUS ROG Strix Z690-E Gaming",
-    category: "Motherboard",
+    category: "Материнская плата",
     price: 469.99,
-    image: "https://images.pexels.com/photos/3520694/pexels-photo-3520694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "Premium Intel Z690 ATX gaming motherboard with PCIe 5.0, DDR5 memory support, and advanced cooling options.",
+    image: "https://avatars.mds.yandex.net/i?id=c21ac89b7a9bd2229f12a3466db61b75636c9ca4-7555196-images-thumbs&n=13",
+    description: "Игровая материнская плата Intel Z690 ATX премиум-класса с интерфейсом PCIe 5.0, поддержкой памяти DDR5 и расширенными возможностями охлаждения.",
     specs: {
-      "Chipset": "Intel Z690",
-      "Socket": "LGA 1700",
-      "Memory Support": "DDR5",
-      "Max Memory": "128GB",
-      "PCIe Slots": "PCIe 5.0 x16, PCIe 4.0 x16",
-      "Form Factor": "ATX"
+      "Чипсет": "Intel Z690",
+      "Сокет": "LGA 1700",
+      "Тип памяти": "DDR5",
+      "Максимальный обьем памяти": "128GB",
+      "Слоты накопителей": "PCIe 5.0 x16, PCIe 4.0 x16",
+      "Форм фактор": "ATX"
     },
     stock: 12,
     rating: 4.6
@@ -76,33 +76,33 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Samsung 980 PRO 2TB",
-    category: "Storage",
+    category: "SSD",
     price: 279.99,
-    image: "https://images.pexels.com/photos/6587871/pexels-photo-6587871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "Ultra-fast NVMe SSD with PCIe 4.0 interface. Sequential reads up to 7,000 MB/s for lightning-fast load times.",
+    image: "https://c.dns-shop.ru/thumb/st4/fit/500/500/cb8c819f7784edc1322b5e9058db7a27/b88f2ef75f876c3fd18b09ab4dbc996e79667ecefa95c03c11b990a473f8dbe2.jpg.webp",
+    description: "Сверхбыстрый твердотельный накопитель NVMe с интерфейсом PCIe 4.0. Скорость последовательного чтения до 7000 МБ/с обеспечивает молниеносную загрузку.",
     specs: {
-      "Capacity": "2TB",
-      "Interface": "PCIe 4.0 x4, NVMe 1.3c",
-      "Sequential Read": "7,000 MB/s",
-      "Sequential Write": "5,100 MB/s",
-      "Form Factor": "M.2 2280"
+      "Обьем памяти": "2TB",
+      "Интерфейс": "PCIe 4.0 x4, NVMe 1.3c",
+      "Максимальная скорочть чтения": "7,000 MB/s",
+      "Максимальная скорость записи": "5,100 MB/s",
+      "Форм-фактор": "M.2 2280"
     },
     stock: 18,
     rating: 4.9
   },
   {
     id: 6,
-    name: "Corsair RM850x",
-    category: "Power Supply",
+    name: "1STPLAYER NGDP",
+    category: "Блоки питания",
     price: 144.99,
-    image: "https://images.pexels.com/photos/6481737/pexels-photo-6481737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "Fully modular power supply with 80 PLUS Gold certification. Features low-noise operation and premium components.",
+    image: "https://avatars.mds.yandex.net/get-mpic/4482270/2a0000018b13937aebadc0c64b739edb3b8a/orig",
+    description: "Полностью модульный блок питания с сертификацией 80 PLUS Gold. Обеспечивает низкий уровень шума и использование высококачественных компонентов.",
     specs: {
-      "Wattage": "850W",
-      "Certification": "80 PLUS Gold",
-      "Modularity": "Fully Modular",
-      "Cooling": "135mm Fan",
-      "Dimensions": "150mm x 86mm x 160mm"
+      "Мощность": "850W",
+      "Стандарт эффективности": "80 PLUS Gold",
+      "Модульность": "Полная модульность",
+      "Охлаждение": "135 мм вентилятор",
+      "Размер": "150mm x 86mm x 160mm"
     },
     stock: 20,
     rating: 4.8
@@ -110,16 +110,16 @@ export const products: Product[] = [
   {
     id: 7,
     name: "NZXT H510 Elite",
-    category: "Case",
+    category: "Корпус",
     price: 149.99,
-    image: "https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "Premium mid-tower case with tempered glass panels, RGB lighting, and excellent cable management.",
+    image: "https://avatars.mds.yandex.net/get-mpic/11486996/2a000001936e7f0975ad82055892f7fe28cb/optimize",
+    description: "Высококачественный корпус средней высоты с панелями из закаленного стекла, RGB-подсветкой и отличным управлением кабелями.",
     specs: {
-      "Form Factor": "Mid-Tower",
-      "Motherboard Support": "Mini-ITX, MicroATX, ATX",
-      "Front I/O": "USB 3.1 Type-C, USB 3.1 Type-A",
-      "Dimensions": "H: 460mm, W: 210mm, D: 428mm",
-      "Fans Included": "2x 140mm RGB Front, 1x 120mm Top, 1x 120mm Rear"
+      "Высота": "Midi-Tower",
+      "Форм-фактор материнских плат": "Mini-ITX, MicroATX, ATX",
+      "Разъемы": "USB 3.1 Type-C, USB 3.1 Type-A",
+      "Размер": "Длинна: 460mm, ширина: 210mm, высота: 428mm",
+      "Количество вентиляторов": "2x 140mm передняя панель, 1x 120mm верхняя панель, 1x 120mm Задняя панель"
     },
     stock: 14,
     rating: 4.5
@@ -127,16 +127,16 @@ export const products: Product[] = [
   {
     id: 8,
     name: "NZXT Kraken X73",
-    category: "Cooling",
+    category: "Куллеры",
     price: 179.99,
-    image: "https://images.pexels.com/photos/6481607/pexels-photo-6481607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "360mm all-in-one liquid CPU cooler with RGB lighting and advanced controls for optimal cooling performance.",
+    image: "https://avatars.mds.yandex.net/i?id=873d058b6d95493948f9c67c423027a426a90233-4370678-images-thumbs&n=13",
+    description: "универсальный жидкостный процессорный кулер диаметром 360 мм с RGB-подсветкой и усовершенствованными элементами управления обеспечивает оптимальную производительность охлаждения.",
     specs: {
-      "Radiator Size": "360mm",
-      "Fan Size": "3x 120mm",
-      "Fan Speed": "500-2,000 RPM",
-      "RGB": "Yes",
-      "Compatible Sockets": "Intel: LGA 1200, 115X, 2066; AMD: AM4, sTRX4"
+      "Размер вентилятора": "360mm",
+      "Количество вентиляторов": "3x 120mm",
+      "Скорость вращения": "500-2,000 RPM",
+      "RGB": "Есть",
+      "Совместимые сокеты": "Intel: LGA 1200, 115X, 2066; AMD: AM4, sTRX4"
     },
     stock: 10,
     rating: 4.7

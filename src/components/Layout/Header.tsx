@@ -50,15 +50,14 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-800 hover:text-blue-700 transition">Главная</Link>
             <Link to="/products" className="text-gray-800 hover:text-blue-700 transition">Товары</Link>
+            <Link to="/AuthForm" className="text-gray-800 hover:text-blue-700 transition">Регистрация</Link>
           </nav>
 
-          {/* Search, Cart, Menu Toggle */}
           <div className="flex items-center space-x-4">
-            {/* Search Form - Desktop */}
             <form onSubmit={handleSearchSubmit} className="hidden md:flex items-center bg-gray-100 rounded-full px-3 py-1">
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Поиск товаров"
                 className="bg-transparent border-none focus:outline-none text-sm w-40 lg:w-64"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -68,7 +67,6 @@ const Header: React.FC = () => {
               </button>
             </form>
 
-            {/* Cart Link */}
             <Link to="/cart" className="relative">
               <ShoppingCart className="h-6 w-6 text-gray-800" />
               {totalItems > 0 && (
@@ -77,8 +75,6 @@ const Header: React.FC = () => {
                 </span>
               )}
             </Link>
-
-            {/* Mobile Menu Toggle */}
             <button 
               className="md:hidden text-gray-800"
               onClick={toggleMenu}
@@ -89,14 +85,12 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
             <div className="flex flex-col space-y-3 px-4">
               <Link to="/" className="text-gray-800 hover:text-blue-700 py-2 transition">Главная</Link>
               <Link to="/products" className="text-gray-800 hover:text-blue-700 py-2 transition">Товары</Link>
               
-              {/* Search Form - Mobile */}
               <form onSubmit={handleSearchSubmit} className="flex items-center bg-gray-100 rounded-full px-3 py-2 mt-2">
                 <input
                   type="text"

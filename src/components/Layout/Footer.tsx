@@ -49,35 +49,33 @@ const Footer: React.FC = () => {
               <li><Link to="/products?category=GPU" className="hover:text-blue-400 transition-colors">Видеокарты</Link></li>
               <li><Link to="/products?category=RAM" className="hover:text-blue-400 transition-colors">Память</Link></li>
               <li><Link to="/products?category=Motherboard" className="hover:text-blue-400 transition-colors">Материнская плата</Link></li>
-              <li><Link to="/products?category=Storage" className="hover:text-blue-400 transition-colors">Storage</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">Контактная информация</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-2 text-blue-400 mt-1 flex-shrink-0" />
-                <span>123 Tech Street, Silicon Valley, CA 94025</span>
+                <span>Улица пушкина, дом Колотушкина 47</span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-2 text-blue-400 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (234) 567 89 10</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-2 text-blue-400 flex-shrink-0" />
-                <span>info@techhardware.com</span>
+                <span>Sevason04@mail.ru</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 text-sm text-center md:text-left md:flex justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} TechHardware. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TechHardware.</p>
           <div className="mt-4 md:mt-0">
-            <Link to="/privacy" className="hover:text-blue-400 mr-4 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-blue-400 mr-4 transition-colors">Политика приватности</Link>
           </div>
         </div>
       </div>

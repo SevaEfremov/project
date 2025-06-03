@@ -12,12 +12,11 @@ const HomePage: React.FC = () => {
   
   return (
     <div>
-      {/* Hero Section */}
       <section className="relative bg-blue-900 text-white">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ 
-            backgroundImage: "url('https://images.pexels.com/photos/3520694/pexels-photo-3520694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" 
+            backgroundImage: "url('https://avatars.mds.yandex.net/i?id=377e104b6f2fe85a1c4affb33800e501cc7ea590-4054908-images-thumbs&n=13')" 
           }}
         />
         
@@ -42,7 +41,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* Features Section */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -80,8 +78,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-      
-      {/* Featured Products */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
@@ -102,8 +98,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-      
-      {/* Category Showcase */}
+
       {selectedCategories.map((category, index) => (
         <section key={category} className={`py-16 ${index % 2 === 1 ? 'bg-gray-50' : ''}`}>
           <div className="container mx-auto px-4">
@@ -131,7 +126,6 @@ const HomePage: React.FC = () => {
         </section>
       ))}
       
-      {/* CTA Section */}
       <section className="bg-blue-700 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">

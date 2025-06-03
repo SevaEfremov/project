@@ -15,7 +15,6 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
 
   return (
     <div className="flex flex-col sm:flex-row items-center py-4 border-b border-gray-200">
-      {/* Product Image */}
       <div className="w-full sm:w-24 h-24 mb-4 sm:mb-0 sm:mr-4">
         <Link to={`/product/${product.id}`}>
           <img 
@@ -26,7 +25,6 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
         </Link>
       </div>
       
-      {/* Product Details */}
       <div className="flex-grow text-center sm:text-left mb-4 sm:mb-0">
         <Link to={`/product/${product.id}`}>
           <h3 className="font-medium text-gray-800 hover:text-blue-700 transition">
@@ -37,7 +35,6 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
         <p className="text-blue-800 font-semibold mt-1">${product.price.toFixed(2)}</p>
       </div>
       
-      {/* Quantity Controls */}
       <div className="flex items-center justify-center border border-gray-300 rounded-lg overflow-hidden mb-4 sm:mb-0 sm:mr-6">
         <button 
           onClick={() => onUpdateQuantity(product.id, quantity - 1)}
@@ -59,12 +56,10 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onRemove })
         </button>
       </div>
       
-      {/* Item Total */}
       <div className="text-right sm:w-24 mb-4 sm:mb-0 sm:mr-4">
         <p className="font-semibold text-gray-900">${itemTotal.toFixed(2)}</p>
       </div>
-      
-      {/* Remove Button */}
+
       <button 
         onClick={() => onRemove(product.id)}
         className="text-red-500 hover:text-red-700 transition"
